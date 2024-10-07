@@ -1,6 +1,6 @@
 import express from 'express';
 export const app = express();
-import { passphraseRouter } from "./src/route/retrieve-passphrase.js"
+import { passphraseRouter } from "./route/retrieve-passphrase.js"
 import dotenv from 'dotenv'
 import http from 'http'
 import { Server } from 'socket.io'
