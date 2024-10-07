@@ -4,14 +4,11 @@ import { passphraseRouter } from "./route/retrieve-passphrase.js"
 import dotenv from 'dotenv'
 import http from 'http'
 import { Server } from 'socket.io'
-import cors from 'cors';
-
+import cors from 'cors'
 
 
 dotenv.config()
 app.use(cors())
-
-const port = process.env.PORT || 8888
 
 app.use(express.static('./public'))
 app.use(express.urlencoded({ extended: false }))
@@ -34,7 +31,7 @@ app.get('/', (req, res) => {
 
 app.use( passphraseRouter )
 
-
+const port = process.env.PORT || 8888
 
  const start = async () => {
     
